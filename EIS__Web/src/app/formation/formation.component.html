@@ -1,0 +1,16 @@
+<div class="container my-5">
+  <div class="jumbotron text-center bg-success text-white">
+    <h1>Nos Formations</h1>
+    <h6>Découvrez nos formations spécialisées pour propulser votre carrière dans le monde de l'innovation.</h6>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let formation of formations">
+      <div class="card text-center p-4 h-100">
+        <img class="mx-auto fa-4x mb-3 img-fluid" width="100px" height="100px" src="{{formation.icon}}" alt="Error">
+        <h3 class="card-title">{{ formation.name }}</h3>
+        <p class="card-text">{{ formation.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="jumbotron text-center bg-success text-white">
+      <h1>Nos Services</h1>
+      <p>Découvrez nos différentes formations pour booster votre carrière.</p>
+    </div>
+    
+    <div class="row d-flex justify-content-center pt-5">
+      <div class="col-md-6 mb-4" *ngFor="let training of trainings">
+        <div class="card h-100" [style.backgroundColor]="training.backgroundColor">
+          <div class="card-body text-center">
+            <i class="{{training.icon}} fa-3x mb-3"> <img src="{{training.icon}}" alt=""> </i>
+            <h5 class="card-title">{{ training.name }}</h5>
+            <p class="card-text">{{ training.description }}</p>
+            <a href="https://blog.eis-innovation.com" class="btn btn-success">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,32 @@
+<section class="titre bg-cover bg-center d-flex justify-content-center align-items-center text-white p-4">
+    <p class="fs-1">EQUIPE <span class="text-success"> EIS</span>-INNOVATION</p>
+</section>
+
+<section>
+    <div class="bg-success text-white p-4">
+       <p>Chaque membre de notre entreprise joue un rôle crucial dans notre succès et dans la réalisation de vos projets. Découvrez les talents et les experts qui travaillent sans relâche pour vous offrir des solutions innovantes et de qualité. Nous sommes fiers de vous présenter notre équipe dévouée et passionnée.</p>
+    </div>
+</section>
+
+<section class="container my-4">
+    <div class="row">
+        <div class="col-xxl-6 col-lg-12 col-md-6 mb-4" *ngFor="let donnee of donnees">
+            <div [ngClass]="donnee.customClass" class="d-flex flex-column flex-lg-row h-100 bg-light p-3">
+                <div class="mb-3 me-4 col-8 mx-auto col-lg-4 d-flex flex-column justify-content-left align-items-center">
+                    <img src="{{donnee.srcImage}}" class="img-fluid w-100 imgg" alt="image non disponible">
+                </div>
+                <div class="col-12 mx-auto col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                    <div class="flex-grow-1 ">
+                        <figure class="mb-3">
+                            <h3 class="fs-3 text-success">{{donnee.name}}</h3>
+                            <figcaption class="fs-5 text-dark">{{donnee.poste}}</figcaption>
+                        </figure>
+                        <p class="mb-2">{{donnee.message}}</p>
+                        <p class="mb-2">{{donnee.description}}</p>
+                        <p class="mb-2">{{donnee.srcIconA}} {{donnee.srcIconB}}</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>

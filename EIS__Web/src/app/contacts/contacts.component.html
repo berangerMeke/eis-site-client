@@ -1,0 +1,93 @@
+
+    <div class="footer container-fluid pt-3">
+        <div class="text-center">
+            <p class="entete text-dark" ><b>CONTACTEZ NOUS</b></p>
+            <div class="rectangle"></div>
+        </div>
+        <div class="row p-5">
+            <div class="col-md-7 left-column pr-1 text-dark">
+                <form>
+                    <div class="casecocher mb-3">
+
+                        <label class="text-success font-weight-bold">Vous êtes :</label>
+                        <label for="entreprise" class="text-success font-weight-bold">Une entreprise</label>
+                        
+                        <input formControlName="entreprise" type="radio" name="choix" class="styledinput">
+                        
+                        <label for="particulier" class="text-success font-weight-bold">Un particulier</label>
+                        
+                        <input formControlName="particulier" type="radio" name="choix"><br/><br/>
+                    
+                    </div>
+
+                    <div class="form-group mb-3">
+
+                        <label for="name" class="text-success font-weight-bold">Nom</label><span >*</span>
+                        <input type="text" class="form-control" formControlName="name" [@changeColor]="activeField === 1 ? 'clicked' : 'default'" (click)="onClick(1)">
+                    
+                    </div>
+
+
+                    <div class="form-group mb-3">
+
+                        <label for="prenom" class="text-success font-weight-bold">Prenom</label><span >*</span>
+                        <input formControlName="prenom" type="text" class="form-control" [@changeColor]="activeField === 2 ? 'clicked' : 'default'" (click)="onClick(2)">
+                    
+                    </div>
+
+
+                    <div class="form-group mb-3">
+
+                        <label for="email" class="text-success font-weight-bold">Email</label><span >*</span>
+                        <input formControlName="email" type="email" class="form-control" [@changeColor]="activeField === 3 ? 'clicked' : 'default'" (click)="onClick(3)">
+                    
+                    </div>
+
+
+
+                    <div class="form-group mb-3">
+
+                        <label for="message" class="text-success font-weight-bold">Votre message</label><span >*</span>
+                        <input formControlName="message" type="text" class="form-control" [@changeColor]="activeField === 4 ? 'clicked' : 'default'" (click)="onClick(4)">
+                    
+                    </div>
+
+                    <input type="button " value="envoyer" class="btn btn-outline-success">
+
+                </form>
+            </div>
+            <div class="col-md-5 right-column text-dark">
+                <p><b>Vous préférez un contact en direct</b></p>
+                <div class="imagedescription">
+                    <img src= "Ballae.jpg" class="mr-3" alt="Description de l'image 1">
+                    <div class="description px-3">
+                        <p style="font-size: 25px;">Louis Michel Mballa</p>
+                        <p style="font-size: 20px;">Fondateur Eis-Innovation</p>
+                        <p style="font-size: 10px;">sangala.michel&#64;eis-innovation.com</p>
+                        <a href="https://www.linkedin.com/in/sangala-mballa-louis-michel-313530219/">suivre sur linkedin</a>
+                        <p style="font-size: 10px;">+33 7 53 30 32 50 </p>
+                    </div>
+                </div>
+                <div class="imagedescription">
+                    <img src= "photo.jpeg" class="mr-3" alt="Description de l'image 1">
+                    <div class="description px-3">
+                        <p style="font-size: 25px;">Hopogap Rene</p>
+                        <p style="font-size: 20px;">Super lead</p>
+                        <p style="font-size: 10px;">hopogap.rene&#64;eis-innovation.com</p>
+                        <p style="font-size: 10px;">+237 6 94 68 78 39</p>
+                    </div>
+                </div>
+                <div class="imagedescription">
+                    <img src= "meke.jpg" class="mr-3" alt="Description de l'image 1">
+                    <div class="description px-3">
+                        <p style="font-size: 25px;">Beranger Meke</p>
+                        <p style="font-size: 20px;">Super lead</p>
+                        <p style="font-size: 10px;">meke.beranger&#64;eis-innovation.com</p>
+                        <p style="font-size: 10px;">+237 6 53 03 37 55</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
