@@ -29,13 +29,31 @@ export class HeaderComponent {
   @Input() log1: boolean = false;
   
   isCollapsed = true;
-  navbarColor: string = '#88DFAB';
+  navbarColor: string = '#fff';
 log: any;
+public languages: any[] = [
+  {
+    icone: "flag.png",
+    langue: "English"
+  },
+  {
+    icone: 'france.png',
+    langue: 'Français'  
+  }
+];
+
+public lang = this.languages[0];  
+
+changeLang() {
+  this.lang = this.lang === this.languages[0] ? this.languages[1] : this.languages[0];
+}
+
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrolling = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.navbarColor = scrolling > 250 ? 'white' : '#88DFAB';
+    this.navbarColor = scrolling > 250 ? 'white' : '#fff';
     //logo = scrolling > 250;
   }
   closeMenu() {

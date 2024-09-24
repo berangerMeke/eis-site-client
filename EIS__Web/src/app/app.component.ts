@@ -25,7 +25,7 @@ export class AppComponent {
  @HostListener('window:scroll', [])
  onWindowScroll() {
    this.isScrolled = window.scrollY > 200;
-   this.Scrolled = window.scrollY > 0.1;
+   this.Scrolled = window.scrollY > 0;
  }
 
 

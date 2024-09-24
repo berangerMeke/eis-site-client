@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-equipe',
@@ -8,7 +9,40 @@ import { CommonModule, NgFor } from '@angular/common';
   templateUrl: './equipe.component.html',
   styleUrl: './equipe.component.css'
 })
-export class EquipeComponent {
+export class EquipeComponent implements AfterViewInit {
+
+    constructor(config: NgbCarouselConfig) {
+      config.interval = 8000; 
+      config.wrap = true;     
+      config.keyboard = true; 
+      config.pauseOnHover = true; 
+    }
+  
+    public showBlocks = {
+     T : false,
+    };
+  
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      this.checkBlocksVisibility();
+    }
+  
+    ngAfterViewInit() {
+      this.checkBlocksVisibility(); 
+      window.addEventListener('resize', () => this.checkBlocksVisibility()); 
+    }
+  
+    private checkBlocksVisibility() {
+      this.showBlocks.T = this.isVisible('.T');
+    }
+  
+    private isVisible(selector: string): boolean {
+      const element = document.querySelector(selector);
+      return element ? element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom > 0 : false;
+    }  
+
+
+
   
   public donnees : any[] = [
     {
@@ -59,5 +93,82 @@ export class EquipeComponent {
         srcIconA: "", srcIconB : "",
         customClass: "style-bg" 
       }
+  ];
+
+  public blog: any[] = [
+
+    {
+      image: "Ballae.jpg",
+      titre:'Louis Michel Mballa',
+      nom:'Fondateur de EIS-INNOVATION',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+
+    },
+    
+    {
+      image: "photo.jpeg",
+      titre:'Hopogap Rene ',
+      nom:'DEVELOPPER FULL WEB',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'linkedin.svg',
+      image2:'whatsapp.gif',
+      savoir:'En savoir plus',
+      color:'#006954' 
+      
+    },
+    {
+      image:"meke.jpg",
+      titre:'Beranger Meke',
+      nom:'DEVELOPPER SPRING BOOT/ANGULAR',
+     paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+
+    },
+
+    {
+      image: "Miguel.jpg",
+      titre:'Miguel Dinou',
+      nom:'DEVELOPPER ANGULAR/UIX DESIGN',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+
+    }
+
+    ,
+
+    {
+      image: "Anthonyx.jpg",
+      titre:'Anthonix Nana',
+      nom:'DEVELOPPER SPRING BOOT',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'linkedin.svg',
+      image2:'whatsapp.gif',
+      savoir:'En savoir plus',
+      color:'#006954' 
+
+    },
+
+    {
+      image:"baruch.jpg",
+      titre:'BARUCH NGAMI',
+      nom:'DEVELOPPER SPRING BOOT',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+
+    }
+
   ];
 }

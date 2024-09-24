@@ -26,95 +26,7 @@ export class AcceuilComponent implements AfterViewInit {
     R4C: false,
     P: false
   };
-  public blog: any[] = [ 
-    
-
-    {
-      image:"expertise.png",
-
-      titre:"Expertise Technique",
-
-      paragraphe:"EIS-Innovation a une equipe d\'experts passionnes en devèloppement web, programmation et conception, offrant des solutions de haute qualite grace a leur savoir-faire"
   
-    },
-
-
-    {
-      image:"approche.png",
-
-      titre:"Approche Personnalisee",
-
-
-      paragraphe:"Nous comprenons que chaque client est unique, Nos solutions sont adaptees sont adaptees aux besoins specifiques de cahque projet offrant ainsi une approche personnalisee "
-    
-    
-    },
-
-
-
-    {
-      image:"innovation (2).png",
-
-      titre:"Innovation et Veille Technologique",
-
-
-      paragraphe:"EIS-Innovation reste a la pointe des dernieres technologies.Leur capacite a Innover et a l\'integrer les meilleures pratiques assure a leurs clients des solutions modernes et performantes"
-    
-    
-    },
-
-
-
-
-    {
-      image:"collaboration.png",
-
-      titre:"Collaboration Active",
-
-
-      paragraphe:"Ils travaillent en partenariat avec leurs clients. La communication ouverte,les retours d experiences et la co-creation sont au coeur de leur approche "
-    
-    
-    },
-
-
-
-
-    {
-      image:"design.png",
-
-      titre:"Design Esthetique",
-
-
-      paragraphe:"EIS-Innovation accorde une grand importance a l\'esthetique.Leurs interfaces sont épurées,intuitives et agreables a utiliser "
-    
-    
-    },
-
-
-
-
-
-    {
-      image:"reactivite.png",
-
-      titre:"Reactivite et Flexibilite",
-
-
-      paragraphe:"Ils sont reactifs aux besoins changeants et flexibles dans leur approche, Les delais sont respectès,et ils s\'adaptent aux imprevus. "
-    
-    
-    },
-
-    {
-      image:"gestion.png",
-      titre:"Gestion de Projet Transparente",
-      paragraphe: "Leur méthodologie de gestion de projet assure une planification rigoureuse et une exécution transparente.",
-    }
-
-  
-  ];
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.checkBlocksVisibility();
@@ -172,74 +84,74 @@ export class AcceuilComponent implements AfterViewInit {
 
 
   ];
-  // public blog: any[] = [
+  public blog: any[] = [
 
-  //   {
-  //     image:"expertise.svg",
+    {
+      image:"expert.png",
 
-  //     titre:"Expertise Technique",
+      titre:"Expertise Technique",
 
-  //     paragraphe:"EIS-Innovation a une equipe d\'experts passionnes en devèloppement web, programmation et conception, offrant des solutions de haute qualite grace a leur savoir-faire"
+      paragraphe:"EIS-Innovation a une equipe d\'experts passionnes en devèloppement web, programmation et conception, offrant des solutions de haute qualite grace a leur savoir-faire"
   
-  //   },
+    },
 
-  //   {
-  //     image:"personal.svg",
+    {
+      image:"approch.png",
 
-  //     titre:"Approche Personnalisee",
+      titre:"Approche Personnalisee",
 
 
-  //     paragraphe:"Nous comprenons que chaque client est unique, Nos solutions sont adaptees sont adaptees aux besoins specifiques de cahque projet offrant ainsi une approche personnalisee "
+      paragraphe:"Nous comprenons que chaque client est unique, Nos solutions sont adaptees sont adaptees aux besoins specifiques de cahque projet offrant ainsi une approche personnalisee "
     
-  //   },
+    },
 
-  //   {
-  //     image:"server.svg",
+    {
+      image:"veille.png",
 
-  //     titre:"Innovation et Veille Technologique",
+      titre:"Innovation et Veille Technologique",
 
 
-  //     paragraphe:"EIS-Innovation reste a la pointe des dernieres technologies.Leur capacite a Innover et a l\'integrer les meilleures pratiques assure a leurs clients des solutions modernes et performantes"
+      paragraphe:"EIS-Innovation reste a la pointe des dernieres technologies.Leur capacite a Innover et a l\'integrer les meilleures pratiques assure a leurs clients des solutions modernes et performantes"
     
-  //   },
+    },
 
-  //   {
-  //     image:"engrenage.svg",
+    {
+      image:"coll.png",
 
-  //     titre:"Collaboration Active",
+      titre:"Collaboration Active",
 
 
-  //     paragraphe:"Ils travaillent en partenariat avec leurs clients. La communication ouverte,les retours d experiences et la co-creation sont au coeur de leur approche "
+      paragraphe:"Ils travaillent en partenariat avec leurs clients. La communication ouverte,les retours d experiences et la co-creation sont au coeur de leur approche "
     
-  //   },
-  //   {
-  //     image:"projet.svg",
+    },
+    {
+      image:"design (2).png",
 
-  //     titre:"Design Esthetique",
-
-
-  //     paragraphe:"EIS-Innovation accorde une grand importance a l\'esthetique.Leurs interfaces sont épurées,intuitives et agreables a utiliser "
-    
-    
-  //   },
+      titre:"Design Esthetique",
 
 
-  //   {
-  //     image:"fusee.svg",
-
-  //     titre:"Reactivite et Flexibilite",
-
-
-  //     paragraphe:"Ils sont reactifs aux besoins changeants et flexibles dans leur approche, Les delais sont respectès,et ils s\'adaptent aux imprevus. "
+      paragraphe:"EIS-Innovation accorde une grand importance a l\'esthetique.Leurs interfaces sont épurées,intuitives et agreables a utiliser "
     
     
-  //   },
+    },
 
-  //   {
-  //     image:"trans.svg",
-  //     titre:"Gestion de Projet Transparente",
-  //     paragraphe: "Leur méthodologie de gestion de projet assure une planification rigoureuse et une exécution transparente.",
-  //   }
 
-  // ];
+    {
+      image:"rocket.png",
+
+      titre:"Reactivite et Flexibilite",
+
+
+      paragraphe:"Ils sont reactifs aux besoins changeants et flexibles dans leur approche, Les delais sont respectès,et ils s\'adaptent aux imprevus. "
+    
+    
+    },
+
+    {
+      image:"clipboard.png",
+      titre:"Gestion de Projet Transparente",
+      paragraphe: "Leur méthodologie de gestion de projet assure une planification rigoureuse et une exécution transparente.",
+    }
+
+  ];
 }

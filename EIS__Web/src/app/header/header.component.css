@@ -5,5 +5,13 @@
 
 nav{
     padding-left: 2em;
-    width: 100vw !important;
+    width: calc(100VW+5px) !important;
+}
+.color{
+    text-decoration: underline;
+    text-decoration-color: transparent; 
+    transition-duration: .3s;
+    color: #5a711b;
+    text-decoration: underline;
+    text-decoration-style:dashed ;
 }

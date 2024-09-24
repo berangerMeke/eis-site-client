@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener, AfterViewInit  } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
@@ -12,90 +12,37 @@ import { RouterLink } from '@angular/router';
   templateUrl: './a-propos.component.html',
   styleUrl: './a-propos.component.css'
 })
-export class AProposComponent {
+export class AProposComponent implements AfterViewInit {
   constructor(config: NgbCarouselConfig) {
-    config.interval = 2000; // Intervalle entre les diapositives en millisecondes
-    config.wrap = true;     // Permet de faire défiler les diapositives en boucle
-    config.keyboard = true; // Permet le contrôle du carrousel via le clavier
-    config.pauseOnHover = true; // Pause le carrousel au survol
+    config.interval = 8000; 
+    config.wrap = true;     
+    config.keyboard = true; 
+    config.pauseOnHover = true; 
   }
 
+  public showBlocks = {
+   Titre : false,
+  };
 
-  public blog: any[] = [
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkBlocksVisibility();
+  }
 
-    {
-      image: "Ballae.jpg",
-      titre:'Louis Michel Mballa',
-      nom:'Fondateur de EIS-INNOVATION',
-      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
-      image1:'whatsapp.gif',
-      image2:'linkedin.svg',
-      savoir:'En savoir plus',
-      color:'#006954' 
+  ngAfterViewInit() {
+    this.checkBlocksVisibility(); 
+    window.addEventListener('resize', () => this.checkBlocksVisibility()); 
+  }
 
-    },
-    
-    {
-      image: "photo.jpeg",
-      titre:'Hopogap Rene ',
-      nom:'DEVELOPPER FULL WEB',
-      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
-      image1:'linkedin.svg',
-      image2:'whatsapp.gif',
-      savoir:'En savoir plus',
-      color:'#006954' 
-      
-    },
-    {
-      image:"meke.jpg",
-      titre:'Beranger Meke',
-      nom:'DEVELOPPER SPRING BOOT/ANGULAR',
-     paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
-      image1:'whatsapp.gif',
-      image2:'linkedin.svg',
-      savoir:'En savoir plus',
-      color:'#006954' 
+  private checkBlocksVisibility() {
+    this.showBlocks.Titre = this.isVisible('.Titre');
+  }
 
-    },
+  private isVisible(selector: string): boolean {
+    const element = document.querySelector(selector);
+    return element ? element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom > 0 : false;
+  }
 
-    {
-      image: "Miguel.jpg",
-      titre:'Miguel Dinou',
-      nom:'DEVELOPPER ANGULAR/UIX DESIGN',
-      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
-      image1:'whatsapp.gif',
-      image2:'linkedin.svg',
-      savoir:'En savoir plus',
-      color:'#006954' 
-
-    }
-
-    ,
-
-    {
-      image: "Anthonyx.jpg",
-      titre:'Anthonix Nana',
-      nom:'DEVELOPPER SPRING BOOT',
-      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
-      image1:'linkedin.svg',
-      image2:'whatsapp.gif',
-      savoir:'En savoir plus',
-      color:'#006954' 
-
-    },
-
-    {
-      image:"baruch.jpg",
-      titre:'BARUCH NGAMI',
-      nom:'DEVELOPPER SPRING BOOT',
-      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
-      image1:'whatsapp.gif',
-      image2:'linkedin.svg',
-      savoir:'En savoir plus',
-      color:'#006954' 
-
-    }
-
-  ];
+ 
 
 }
