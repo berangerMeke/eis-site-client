@@ -167,8 +167,84 @@ export class EquipeComponent implements AfterViewInit {
       image2:'linkedin.svg',
       savoir:'En savoir plus',
       color:'#006954' 
+    },
 
-    }
+    {
+      image:"photo.jpeg",
+      titre:'MAXIME',
+      nom:'DEVELOPPEUR LARAVEL, DJANGO, BLOCKCHAIN',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
+
+    {
+      image:"photo.jpeg",
+      titre:'IDRISS TOKO',
+      nom:'DEVELOPPEUR FLUTTER, BLOCKCHAIN',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
+
+    {
+      image:"photo.jpeg",
+      titre:'SALOMON GHOST',
+      nom:'UX DESIGNER',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
+
+    {
+      image:"photo.jpeg",
+      titre:'CABREL',
+      nom:'DEVELOPPEUR JAVASCRIPT',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
+
+    {
+      image:"photo.jpeg",
+      titre:'DANIEL',
+      nom:'REFERENCEUR WEB / SEO',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
+
+    {
+      image:"photo.jpeg",
+      titre:'GABRIEL',
+      nom:'DEVELOPPEUR PYTHON DJANGO',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
+
+    {
+      image:"photo.jpeg",
+      titre:'RAPHAEL',
+      nom:'DEVELOPPEUR',
+      paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
+      image1:'whatsapp.gif',
+      image2:'linkedin.svg',
+      savoir:'En savoir plus',
+      color:'#006954' 
+    },
 
   ];
 }
