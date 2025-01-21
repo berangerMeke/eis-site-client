@@ -110,7 +110,7 @@ export class EquipeComponent implements AfterViewInit {
     },
     
     {
-      image: "photo.jpeg",
+      image: "images/user.jpg",
       titre:'Hopogap Rene ',
       nom:'DEVELOPPER FULL WEB',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -170,7 +170,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'MAXIME',
       nom:'DEVELOPPEUR LARAVEL, DJANGO, BLOCKCHAIN',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -181,7 +181,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'IDRISS TOKO',
       nom:'DEVELOPPEUR FLUTTER, BLOCKCHAIN',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -192,7 +192,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'SALOMON GHOST',
       nom:'UX DESIGNER',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -203,7 +203,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'CABREL',
       nom:'DEVELOPPEUR JAVASCRIPT',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -214,7 +214,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'DANIEL',
       nom:'REFERENCEUR WEB / SEO',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -225,7 +225,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'GABRIEL',
       nom:'DEVELOPPEUR PYTHON DJANGO',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',
@@ -236,7 +236,7 @@ export class EquipeComponent implements AfterViewInit {
     },
 
     {
-      image:"photo.jpeg",
+      image:"images/user.jpg",
       titre:'RAPHAEL',
       nom:'DEVELOPPEUR',
       paragraphe:'Il gere la supervise des equipes, la gestion des projets,et l\'assurance de la satisfaction des clients',

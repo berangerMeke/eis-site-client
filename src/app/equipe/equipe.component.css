@@ -11,6 +11,10 @@
         color: #fff;
 }
 
+.title {
+    color: #279A40 !important ;
+}
+
 .titre p{
     background-color: #00000055;
     width: 100%;
