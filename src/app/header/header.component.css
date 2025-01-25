@@ -5,7 +5,7 @@
 
 nav{
     padding-left: 2em;
-    width: calc(100VW+5px) !important;
+    width: calc(100vw + 5px) !important;
 }
 .color{
     text-decoration: underline;

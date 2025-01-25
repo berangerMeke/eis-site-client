@@ -6,28 +6,25 @@
         </div>
         <div class="row p-5">
             <div class="col-md-7 left-column pr-1 text-dark">
-                <form>
+                <form [formGroup]="contactForm">
                     <div class="casecocher mb-3">
 
                         <label class="text-success font-weight-bold">Vous êtes :</label>
                         <label for="entreprise" class="text-success font-weight-bold">Une entreprise</label>
                         
-                        <input formControlName="entreprise" type="radio" name="choix" class="styledinput">
+                        <input formControlName="typeClient" type="radio" value="entreprise" class="styledinput">
                         
                         <label for="particulier" class="text-success font-weight-bold">Un particulier</label>
                         
-                        <input formControlName="particulier" type="radio" name="choix"><br/><br/>
+                        <input formControlName="typeClient" type="radio" value="particulier"><br/><br/>
                     
                     </div>
-
                     <div class="form-group mb-3">
 
                         <label for="name" class="text-success font-weight-bold">Nom</label><span >*</span>
                         <input type="text" class="form-control" formControlName="name" [@changeColor]="activeField === 1 ? 'clicked' : 'default'" (click)="onClick(1)">
                     
                     </div>
-
-
                     <div class="form-group mb-3">
 
                         <label for="prenom" class="text-success font-weight-bold">Prenom</label><span >*</span>

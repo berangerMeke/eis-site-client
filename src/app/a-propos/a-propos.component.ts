@@ -3,12 +3,11 @@ import { Component, HostListener, AfterViewInit  } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-a-propos',
   standalone: true,
-  imports: [NgbModule, CommonModule, NgbCarouselModule, RouterLink],
+  imports: [NgbModule, CommonModule, NgbCarouselModule],
   templateUrl: './a-propos.component.html',
   styleUrl: './a-propos.component.css'
 })
