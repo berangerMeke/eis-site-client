@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HttpService } from '../service/http.service';
+import { Message } from '../model/message';
 // import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -29,18 +31,40 @@ export class ContactsComponent implements OnInit{
 
   contactForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder){}
+  message!: Message;
+  
+
+  constructor(private formBuilder: FormBuilder, private httpService: HttpService ){}
 
   ngOnInit(): void {
       this.contactForm = this.formBuilder.group({
-        typeClient: ['', Validators.required],
+        typeClient: ['particulier', Validators.required],
         name: ['', Validators.required],
         prenom: ['', Validators.required],
         email: ['', Validators.required],
-        message: ['', Validators.required]
+        message: ['', Validators.required],
+        phone: ['', Validators.required],
       })
   }
 
+  onSendMessage(){
+    this.message = new Message(
+      "contacts@eis-innovation.com",
+      "EIS SITE Message",
+      `<div style='margin-left: 70px; margin-right: 70px;'><div style='background-color: rgb(7,160,7); color: white; font-size: 20px; text-align: center;height: 40px;padding-top: 5px; font-weight: 700;'>EIS-SITE Contact message</div><div style='margin-top: 10px'>Type de client : <span style='font-weight: 700;'>${this.contactForm.value.typeClient}</span></div><div>Message envoyé par : <span style='font-weight: 700;'>${this.contactForm.value.name} ${this.contactForm.value.prenom}</span></div><div>Email : <span style='font-weight: 700;'>${this.contactForm.value.email}</span> </div><div>Téléphone : <span style='font-weight: 700;'>${this.contactForm.value.phone}</span> </div><div style='margin-top: 20px; font-weight: 700;'>Message :</div><div style='margin-top: 5px; margin-left: 30px; margin-right: 30px;'>${this.contactForm.value.message} :</div></div>`,
+      true,
+      true   
+    );
+
+    console.log(this.message);
+
+    if(this.message){
+      this.httpService.sendContactMessage(this.message).subscribe(response => {
+        console.log(response);
+      } );
+    } 
+
+  }
 
   onClick(fieldindex : number) {
     this.activeField = this.activeField === fieldindex ? null : fieldindex;

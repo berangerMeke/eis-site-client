@@ -4,9 +4,10 @@
 }
 
 .entete {
-    color: green;
-    font-size: 20px;
+    color: rgb(102, 102, 102);
+    font-size: 30px;
     text-align: center;
+    margin-top: 20px;
 }
 
 .rectangle {
