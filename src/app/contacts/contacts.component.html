@@ -5,19 +5,20 @@
             <div class="rectangle"></div>
         </div>
         <div class="row p-5">
-            <div class="col-md-7 left-column pr-1 text-dark">
+            <div class="col-md-7 left-column pr-1 text-dark contact-space">
                 <form [formGroup]="contactForm">
-                    <div class="casecocher mb-3">
-
+                    <div class="form-group mb-3">
                         <label class="text-success font-weight-bold">Vous êtes :</label>
-                        <label for="entreprise" class="text-success font-weight-bold">Une entreprise</label>
-                        
-                        <input formControlName="typeClient" type="radio" value="entreprise" class="styledinput">
-                        
-                        <label for="particulier" class="text-success font-weight-bold">Un particulier</label>
-                        
-                        <input formControlName="typeClient" type="radio" value="particulier"><br/><br/>
-                    
+                       <div class="card card-body card-width">
+                            <div class="form-group mb-3">
+                                <label for="particulier" class="text-success font-weight-bold">Particulier </label>&nbsp;&nbsp;
+                                <input formControlName="typeClient" type="radio" value="particulier">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="entreprise" class="text-success font-weight-bold">Entreprise </label>&nbsp;&nbsp;    
+                                <input formControlName="typeClient" type="radio" value="entreprise" class="styledinput">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group mb-3">
 
@@ -54,8 +55,7 @@
                 </form>
             </div>
             <div class="col-md-3 right-column text-dark offset-md-1">
-
-                <div class="card" style="width: 23rem;">
+                <div class="card" style="width: 100%;">
                     <div class="card-body">
                       <hr>
                       <div style="margin-bottom: 15px;">

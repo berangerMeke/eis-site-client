@@ -58,10 +58,12 @@ changeLang() {
   }
   closeMenu() {
     this.isCollapsed = true;
+    console.log(this.isCollapsed);
   }
 
   onLinkClick() {
     this.isCollapsed = true;
+    console.log(this.isCollapsed);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
