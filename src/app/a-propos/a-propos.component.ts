@@ -42,6 +42,4 @@ export class AProposComponent implements AfterViewInit {
     return element ? element.getBoundingClientRect().top < window.innerHeight && element.getBoundingClientRect().bottom > 0 : false;
   }
 
- 
-
 }

@@ -30,8 +30,9 @@ export class ContactsComponent implements OnInit{
   activeField: number | null = null;
 
   contactForm!: FormGroup;
-
   message!: Message;
+  isLoading = false;
+  toasts: any[] = [];
   
 
   constructor(private formBuilder: FormBuilder, private httpService: HttpService ){}
@@ -47,7 +48,10 @@ export class ContactsComponent implements OnInit{
       })
   }
 
+  get email() { return this.contactForm.get('email'); }
+
   onSendMessage(){
+    this.isLoading = true; // Show spinner
     this.message = new Message(
       "contacts@eis-innovation.com",
       "EIS SITE Message",
@@ -56,11 +60,11 @@ export class ContactsComponent implements OnInit{
       true   
     );
 
-    console.log(this.message);
-
     if(this.message){
       this.httpService.sendContactMessage(this.message).subscribe(response => {
         console.log(response);
+        this.show("Confirmation", "Message envoyé avec succès !", "") ; // Afficher Toast..
+        this.contactForm.reset();
       } );
     } 
 
@@ -69,6 +73,19 @@ export class ContactsComponent implements OnInit{
   onClick(fieldindex : number) {
     this.activeField = this.activeField === fieldindex ? null : fieldindex;
   }
+
+  // Pour le Toast
+  show(title: string, message: string, time: string) {
+    this.isLoading = false; // Arrêt spinner
+    this.toasts.push({ title, message, time, show: true });
+    setTimeout(() => {
+      this.toasts.shift();
+    }, 6000); // Le toast disparaît après 6 secondes
+  }
+  closeToast(toast: any) {
+    toast.show = false;
+  }
+
 }
 
 
